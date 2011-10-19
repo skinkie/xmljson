@@ -1,0 +1,5 @@
+XMLJSON transparent conversion
+
+Within XEP-xxxx: JSON Content Type support <http://xmpp.org/extensions/inbox/json.html> I found a transparent way to convert between XML and JSON. Now there are some Python things online that 'claim' to do transparent conversions, I have had a very hard time finding anything that really worked.
+
+Thus I implement this 'schema' myself. The problem here is that ElementTree can't do a transparent conversion, because it actively parses xmlns and likes. But the idea is actually quite clear, and maybe it is actually better to 'preprocess' these namespaces anyway.
